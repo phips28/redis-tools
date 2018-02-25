@@ -21,7 +21,7 @@ if (!$argv[1] || !$argv[2]) {
   die('host old and/or host new missing');
 }
 
-if (isset($argv[3])) {
+if (isset($argv[3]) && $argv[3] != '-q' && $argv[3] != '--quiet') {
   $keys = $argv[3];
 } else {
   $keys = '*';
